@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.skilloVilla.exception.BookException;
 import com.skilloVilla.exception.UserException;
 import com.skilloVilla.service.LibraryLogService;
+import com.skilloVilla.service.LibraryLogServiceImpl;
 
 @RestController
 @RequestMapping("/libraryLog")
@@ -22,7 +23,7 @@ public class LibraryLogController {
 	@Autowired
 	LibraryLogService libraryLogService;
 	
-	@GetMapping("/issuerId/{userId}/bookId/{bookId}")
+	@GetMapping("/userId/{userId}/bookId/{bookId}")
 	public ResponseEntity<String> addEntryIntoLog(@PathVariable Integer userId, @PathVariable Integer bookId) throws UserException, BookException{
 		
 		String dueDate = libraryLogService.issueBook(userId, bookId);
@@ -36,7 +37,6 @@ public class LibraryLogController {
 		String message = libraryLogService.returnBook(userId, bookId, date);
 		
 		return new ResponseEntity<String>(message, HttpStatus.CREATED);
-	
 	}
 	
 }

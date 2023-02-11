@@ -27,7 +27,7 @@ public class UserController {
 	    return new ResponseEntity<User>(savedUser,HttpStatus.CREATED);
 	}
 	
-	@GetMapping("/gerUser/{userId}")
+	@GetMapping("/getUser/{userId}")
 	public ResponseEntity<User> getUserById(@PathVariable Integer userId) throws UserException{
 		return userService.findUserById(userId)
 				          .map(ResponseEntity::ok)

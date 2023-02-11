@@ -22,6 +22,6 @@ public class Book {
 	private Integer bookId;
 	private String bookTitle;
 	private String bookAuthor;
-	private boolean availability;
+	private Boolean availability;
 	
 }

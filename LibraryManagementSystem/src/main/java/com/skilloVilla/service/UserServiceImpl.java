@@ -19,7 +19,6 @@ public class UserServiceImpl implements UserService{
 	public User addUser(User user) throws UserException {
 		
 		Optional<User> userOptional = userRepo.findByUserEmail(user.getUserEmail());
-		
 		if(userOptional.isPresent()) throw new UserException("This user is already registered");
 		else return userRepo.save(user);
 	}
@@ -28,7 +27,6 @@ public class UserServiceImpl implements UserService{
 	public Optional<User> findUserById(Integer userId){
 		
 		 return userRepo.findById(userId);
-		
 		
 	}
 

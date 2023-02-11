@@ -21,7 +21,7 @@ public class BookServiceImpl implements BookService{
 	}
 
 	@Override
-	public Optional<Book> findUserById(Integer bookId){
+	public Optional<Book> findBookById(Integer bookId){
 	 	return bookRepo.findById(bookId);
 	}
 

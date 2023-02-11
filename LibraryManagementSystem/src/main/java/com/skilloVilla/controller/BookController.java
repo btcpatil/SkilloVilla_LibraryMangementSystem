@@ -26,9 +26,9 @@ public class BookController {
 	    return new ResponseEntity<Book>(savedBook,HttpStatus.CREATED);
 	}
 	
-	@GetMapping("/gerBook/{bookId}")
+	@GetMapping("/getBook/{bookId}")
 	public ResponseEntity<Book> getBookById(@PathVariable Integer bookId){
-		return bookService.findUserById(bookId)
+		return bookService.findBookById(bookId)
 				          .map(ResponseEntity::ok)
 				          .orElseGet(() -> ResponseEntity.notFound().build());
 	}

@@ -7,5 +7,5 @@ import com.skilloVilla.model.Book;
 public interface BookService {
  
 	public Book addBook(Book book);
-	public Optional<Book> findUserById(Integer bookId);
+	public Optional<Book> findBookById(Integer bookId);
 }
