@@ -48,12 +48,12 @@ This API will store the new book in the database.
 
 ### `Issue Book`: http://localhost:8008/libraryLog/issueBook/userId/{userId}/bookId/{bookId}
 
-This API will issue a book to the eligible user who issued less than or equal to 5 books, the book should be available and return the due date to return the book.
+This API will issue a book to the eligible user who issued less than or equal to 5 books, the book should be available and returns the due date to return the book.
 The due date to return the book is always today’s date + 8 days.
 
 ### `Return Book`: http://localhost:8008/libraryLog/returnBook/bookId/{bookId}/userId/{userId}?returnDate=2023-02-15 {any future date}
 
-This will take the book return back and the returned book is now available to issue again if the user is eligible for a fine then it calculates the fine according to the number of days late submission(per day 10rs) and this information will be stored in the LibraryLog database for the future use.
+This will take the book return back and the returned book is now available to issue again. If the user is eligible for a fine then it calculates the fine according to the number of days late submission(per day 10rs) and this information will be stored in the LibraryLog database for the future use.
 
 ## Future Updates
 
