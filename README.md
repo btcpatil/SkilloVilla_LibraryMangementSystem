@@ -11,7 +11,7 @@ late returns</p>
 - Junit testing testing for all the layers using Mockito framework.
 
 ## ER Diagram
-<a href="#"><img width="100%" height="auto" src="https://drive.google.com/file/d/1FJRAqgqDq76TQXWEX3bOEMGFrB3kL6mH/view?usp=sharing" height="175px"/></a>
+<a href="#"><img width="100%" height="auto" src="https://github.com/btcpatil/SkilloVilla_LibraryMangementSystem/blob/main/Resources/ER_diagram.png" height="175px"/></a>
 
 ## Built With
 - Java
