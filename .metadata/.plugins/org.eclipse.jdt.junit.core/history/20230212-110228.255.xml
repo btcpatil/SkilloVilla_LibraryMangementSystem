@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="BookServiceTest" project="LibraryManagementSystem" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.skilloVilla.service.BookServiceTest" time="1.102" displayname="BookServiceTest" uniqueid="[engine:junit-jupiter]/[class:com.skilloVilla.service.BookServiceTest]">
+    <testcase name="givenBookObject_whenSaveBook_ThenReturnSavedBook" classname="com.skilloVilla.service.BookServiceTest" time="1.094" displayname="givenBookObject_whenSaveBook_ThenReturnSavedBook()" uniqueid="[engine:junit-jupiter]/[class:com.skilloVilla.service.BookServiceTest]/[method:givenBookObject_whenSaveBook_ThenReturnSavedBook()]"/>
+    <testcase name="givenBookId_whenFindById_thenReturnBookObject" classname="com.skilloVilla.service.BookServiceTest" time="0.006" displayname="givenBookId_whenFindById_thenReturnBookObject()" uniqueid="[engine:junit-jupiter]/[class:com.skilloVilla.service.BookServiceTest]/[method:givenBookId_whenFindById_thenReturnBookObject()]"/>
+  </testsuite>
+</testrun>

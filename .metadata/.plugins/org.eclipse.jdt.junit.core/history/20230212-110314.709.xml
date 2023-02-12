@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="com.skilloVilla.repository" project="LibraryManagementSystem" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="com.skilloVilla.repository.LibraryLogRepositoryTest" time="0.403" displayname="LibraryLogRepositoryTest" uniqueid="[engine:junit-jupiter]/[class:com.skilloVilla.repository.LibraryLogRepositoryTest]">
+    <testcase name="givenDummyEntry_whenSaveIntoLog_thenReturnSavedEntry" classname="com.skilloVilla.repository.LibraryLogRepositoryTest" time="0.403" displayname="givenDummyEntry_whenSaveIntoLog_thenReturnSavedEntry()" uniqueid="[engine:junit-jupiter]/[class:com.skilloVilla.repository.LibraryLogRepositoryTest]/[method:givenDummyEntry_whenSaveIntoLog_thenReturnSavedEntry()]"/>
+  </testsuite>
+  <testsuite name="com.skilloVilla.repository.BookRepositoryTest" time="0.062" displayname="BookRepositoryTest" uniqueid="[engine:junit-jupiter]/[class:com.skilloVilla.repository.BookRepositoryTest]">
+    <testcase name="givenBookObject_whenSaveBook_ThenReturnSavedBook" classname="com.skilloVilla.repository.BookRepositoryTest" time="0.029" displayname="givenBookObject_whenSaveBook_ThenReturnSavedBook()" uniqueid="[engine:junit-jupiter]/[class:com.skilloVilla.repository.BookRepositoryTest]/[method:givenBookObject_whenSaveBook_ThenReturnSavedBook()]"/>
+    <testcase name="givenBookId_whenFindById_thenReturnBookObject" classname="com.skilloVilla.repository.BookRepositoryTest" time="0.03" displayname="givenBookId_whenFindById_thenReturnBookObject()" uniqueid="[engine:junit-jupiter]/[class:com.skilloVilla.repository.BookRepositoryTest]/[method:givenBookId_whenFindById_thenReturnBookObject()]"/>
+  </testsuite>
+  <testsuite name="com.skilloVilla.repository.UserRepositoryTest" time="0.074" displayname="UserRepositoryTest" uniqueid="[engine:junit-jupiter]/[class:com.skilloVilla.repository.UserRepositoryTest]">
+    <testcase name="givenUserId_whenFindById_thenReturnUserObject" classname="com.skilloVilla.repository.UserRepositoryTest" time="0.032" displayname="givenUserId_whenFindById_thenReturnUserObject()" uniqueid="[engine:junit-jupiter]/[class:com.skilloVilla.repository.UserRepositoryTest]/[method:givenUserId_whenFindById_thenReturnUserObject()]"/>
+    <testcase name="givenUserObject_whenSaveUser_ThenReturnSavedUser" classname="com.skilloVilla.repository.UserRepositoryTest" time="0.033" displayname="givenUserObject_whenSaveUser_ThenReturnSavedUser()" uniqueid="[engine:junit-jupiter]/[class:com.skilloVilla.repository.UserRepositoryTest]/[method:givenUserObject_whenSaveUser_ThenReturnSavedUser()]"/>
+  </testsuite>
+</testrun>

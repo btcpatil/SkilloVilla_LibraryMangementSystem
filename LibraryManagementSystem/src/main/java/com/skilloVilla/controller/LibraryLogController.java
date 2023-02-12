@@ -23,6 +23,7 @@ public class LibraryLogController {
 	@Autowired
 	LibraryLogService libraryLogService;
 	
+	//To issue a book from the library.
 	@GetMapping("/issueBook/userId/{userId}/bookId/{bookId}")
 	public ResponseEntity<String> addEntryIntoLog(@PathVariable Integer userId, @PathVariable Integer bookId) throws UserException, BookException{
 		
@@ -31,6 +32,7 @@ public class LibraryLogController {
 		return new ResponseEntity<String>(dueDate, HttpStatus.CREATED);
 	}
 	
+	//To return the issued the book.
 	@GetMapping("/returnBook/bookId/{bookId}/userId/{userId}")
     public ResponseEntity<String> returnBook(@PathVariable("userId") Integer userId, @PathVariable("bookId") Integer bookId,@RequestParam String returnDate) throws UserException, BookException{
 		LocalDate date =  LocalDate.parse(returnDate);

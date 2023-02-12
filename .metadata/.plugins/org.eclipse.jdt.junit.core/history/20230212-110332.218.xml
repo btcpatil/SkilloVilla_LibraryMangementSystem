@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="com.skilloVilla.controller" project="LibraryManagementSystem" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="com.skilloVilla.controller.LibraryLogControllerTest" time="0.236" displayname="LibraryLogControllerTest" uniqueid="[engine:junit-jupiter]/[class:com.skilloVilla.controller.LibraryLogControllerTest]">
+    <testcase name="givenUserIdBookId_whenIssueBook_thenReturnDueDate" classname="com.skilloVilla.controller.LibraryLogControllerTest" time="0.236" displayname="givenUserIdBookId_whenIssueBook_thenReturnDueDate()" uniqueid="[engine:junit-jupiter]/[class:com.skilloVilla.controller.LibraryLogControllerTest]/[method:givenUserIdBookId_whenIssueBook_thenReturnDueDate()]"/>
+  </testsuite>
+  <testsuite name="com.skilloVilla.controller.BookControllerTest" time="0.248" displayname="BookControllerTest" uniqueid="[engine:junit-jupiter]/[class:com.skilloVilla.controller.BookControllerTest]">
+    <testcase name="givenBookId_whenFindById_thenReturnSavedBook" classname="com.skilloVilla.controller.BookControllerTest" time="0.165" displayname="givenBookId_whenFindById_thenReturnSavedBook()" uniqueid="[engine:junit-jupiter]/[class:com.skilloVilla.controller.BookControllerTest]/[method:givenBookId_whenFindById_thenReturnSavedBook()]"/>
+    <testcase name="givenBookObject_whenSaveBook_thenReturnSavedBook" classname="com.skilloVilla.controller.BookControllerTest" time="0.075" displayname="givenBookObject_whenSaveBook_thenReturnSavedBook()" uniqueid="[engine:junit-jupiter]/[class:com.skilloVilla.controller.BookControllerTest]/[method:givenBookObject_whenSaveBook_thenReturnSavedBook()]"/>
+  </testsuite>
+  <testsuite name="com.skilloVilla.controller.UserControllerTest" time="0.048" displayname="UserControllerTest" uniqueid="[engine:junit-jupiter]/[class:com.skilloVilla.controller.UserControllerTest]">
+    <testcase name="givenUserId_whenFindUserById_thenReturnSavedUser" classname="com.skilloVilla.controller.UserControllerTest" time="0.028" displayname="givenUserId_whenFindUserById_thenReturnSavedUser()" uniqueid="[engine:junit-jupiter]/[class:com.skilloVilla.controller.UserControllerTest]/[method:givenUserId_whenFindUserById_thenReturnSavedUser()]"/>
+    <testcase name="givenUserObject_whenSaveUser_thenReturnSavedUser" classname="com.skilloVilla.controller.UserControllerTest" time="0.018" displayname="givenUserObject_whenSaveUser_thenReturnSavedUser()" uniqueid="[engine:junit-jupiter]/[class:com.skilloVilla.controller.UserControllerTest]/[method:givenUserObject_whenSaveUser_thenReturnSavedUser()]"/>
+  </testsuite>
+</testrun>

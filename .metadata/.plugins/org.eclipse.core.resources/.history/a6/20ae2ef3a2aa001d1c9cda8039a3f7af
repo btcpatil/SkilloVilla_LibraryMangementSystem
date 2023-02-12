@@ -1,0 +1,42 @@
+package com.skilloVilla.controller;
+
+import java.time.LocalDate;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.skilloVilla.exception.BookException;
+import com.skilloVilla.exception.UserException;
+import com.skilloVilla.service.LibraryLogService;
+import com.skilloVilla.service.LibraryLogServiceImpl;
+
+@RestController
+@RequestMapping("/libraryLog")
+public class LibraryLogController {
+
+	@Autowired
+	LibraryLogService libraryLogService;
+	
+	@GetMapping("/issueBook/userId/{userId}/bookId/{bookId}")
+	public ResponseEntity<String> addEntryIntoLog(@PathVariable Integer userId, @PathVariable Integer bookId) throws UserException, BookException{
+		
+		String dueDate = libraryLogService.issueBook(userId, bookId);
+		
+		return new ResponseEntity<String>(dueDate, HttpStatus.CREATED);
+	}
+	
+	@GetMapping("/returnBook/bookId/{bookId}/userId/{userId}")
+    public ResponseEntity<String> returnBook(@PathVariable("userId") Integer userId, @PathVariable("bookId") Integer bookId,@RequestParam String returnDate) throws UserException, BookException{
+		LocalDate date =  LocalDate.parse(returnDate);
+		String message = libraryLogService.returnBook(userId, bookId, date);
+		
+		return new ResponseEntity<String>(message, HttpStatus.CREATED);
+	}
+	
+}
