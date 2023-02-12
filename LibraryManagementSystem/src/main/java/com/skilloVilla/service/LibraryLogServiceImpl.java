@@ -37,7 +37,7 @@ public class LibraryLogServiceImpl implements LibraryLogService{
 		boolean isBoolAssigned = assignBookToUser(existingUser,existingBook);
 		if(isBoolAssigned) {
 			LibraryLog libraryLog =  LibraryLog.builder()
-					                           .issuerId(userId)
+					                           .userId(userId)
 					                           .bookId(bookId)
 					                           .bookIssueDate(LocalDate.now())
 					                           .bookDueDate(LocalDate.now().plusDays(8))
@@ -74,7 +74,7 @@ public class LibraryLogServiceImpl implements LibraryLogService{
 		int totalFine = 0;
 		int finePerDay = 10;
 		
-		LibraryLog libraryLog = libraryLogRepo.findByIssuerIdAndBookId(userId, bookId).orElseThrow(() -> new UserException("No match found"));
+		LibraryLog libraryLog = libraryLogRepo.findByUserIdAndBookId(userId, bookId).orElseThrow(() -> new UserException("No match found"));
 		int difference = returnDate.compareTo(libraryLog.getBookDueDate());
 		
 		User existingUser = userRepo.findById(userId).get();

@@ -19,7 +19,7 @@ public class LibraryLogRepositoryTest {
 	public void givenDummyEntry_whenSaveIntoLog_thenReturnSavedEntry() {
 		//Given - setup
 		LibraryLog libraryLog = LibraryLog.builder()
-				                          .issuerId(1)
+				                          .userId(1)
 				                          .bookId(2)
 				                          .bookDueDate(LocalDate.now().plusDays(8))
 				                          .bookIssueDate(LocalDate.now())

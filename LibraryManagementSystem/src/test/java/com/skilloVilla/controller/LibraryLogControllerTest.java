@@ -42,7 +42,7 @@ public class LibraryLogControllerTest {
 		          .willReturn("Last date to submit the book is "+ LocalDate.now().plusDays(8));
 		
 		//when - action or behaviour under test
-		ResultActions response = mockMvc.perform(get("/libraryLog/issuerId/{userId}/bookId/{bookId}", userId,bookId));
+		ResultActions response = mockMvc.perform(get("/libraryLog/issueBook/userId/{userId}/bookId/{bookId}", userId,bookId));
 		
 		//then - verify the results or output using assert statement
 		response.andExpect(MockMvcResultMatchers.status().isCreated());

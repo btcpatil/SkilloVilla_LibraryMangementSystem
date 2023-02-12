@@ -9,7 +9,7 @@ import com.skilloVilla.model.LibraryLog;
 
 public interface LibraryLogRepository extends JpaRepository<LibraryLog, Integer>{
 
-	@Query("select l from  LibraryLog l where l.issuerId = ?1 and l.bookId = ?2 and l.bookReturnDate = null")
-	public Optional<LibraryLog> findByIssuerIdAndBookId(Integer issuerId, Integer bookId);
+	@Query("select l from  LibraryLog l where l.userId = ?1 and l.bookId = ?2 and l.bookReturnDate = null")
+	public Optional<LibraryLog> findByUserIdAndBookId(Integer userId, Integer bookId);
 	
 }

@@ -21,8 +21,8 @@ public class LibraryLog {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer serialNumber;
-	private Integer issuerId;
+	private Integer logId;
+	private Integer userId;
 	private Integer bookId;
 	private LocalDate bookIssueDate;
 	private LocalDate bookDueDate;

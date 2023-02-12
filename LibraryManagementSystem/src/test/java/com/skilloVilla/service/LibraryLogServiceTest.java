@@ -60,7 +60,7 @@ public class LibraryLogServiceTest {
 			   .build();
 	   
 	   libraryLog = LibraryLog.builder()
-			                  .issuerId(user.getUserId())
+			                  .userId(user.getUserId())
 			                  .bookId(book.getBookId())
 			                  .bookIssueDate(LocalDate.now())
 			                  .bookDueDate(LocalDate.now().plusDays(8))
@@ -94,11 +94,11 @@ public class LibraryLogServiceTest {
 		BDDMockito.given(bookRepo.findById(book.getBookId())).willReturn(Optional.of(book));
 		user.getBookList().add(book);
 		BDDMockito.given(userRepo.save(user)).willReturn(user);
-		BDDMockito.given(libraryLogRepo.findByIssuerIdAndBookId(user.getUserId(), book.getBookId()))
+		BDDMockito.given(libraryLogRepo.findByUserIdAndBookId(user.getUserId(), book.getBookId()))
 		                               .willReturn(Optional.of(libraryLog));
 		
 		LibraryLog savedLLibraryLog = LibraryLog.builder()
-										        .issuerId(user.getUserId())
+										        .userId(user.getUserId())
 										        .bookId(book.getBookId())
 										        .bookIssueDate(LocalDate.now())
 										        .bookDueDate(LocalDate.now().plusDays(8))

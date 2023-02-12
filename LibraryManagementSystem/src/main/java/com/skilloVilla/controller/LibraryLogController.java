@@ -23,7 +23,7 @@ public class LibraryLogController {
 	@Autowired
 	LibraryLogService libraryLogService;
 	
-	@GetMapping("/userId/{userId}/bookId/{bookId}")
+	@GetMapping("/issueBook/userId/{userId}/bookId/{bookId}")
 	public ResponseEntity<String> addEntryIntoLog(@PathVariable Integer userId, @PathVariable Integer bookId) throws UserException, BookException{
 		
 		String dueDate = libraryLogService.issueBook(userId, bookId);
